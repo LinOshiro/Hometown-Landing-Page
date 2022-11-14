@@ -1,1 +1,106 @@
+:root {
+  --primary-colors: #4f9dad;
+  --secondary-color: #be5f9d;
+  --heading-font-family: "Pacifico", cursive;
+  --default-font-family: "Poppins", sans-serif;
+}
 
+body {
+  font-family: var(--default-font-family);
+  margin: 10px;
+  background-color: #f1ddc3;
+}
+
+.low-opacity-bg-image {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  min-height: 500px;
+
+  position: relative;
+  isolation: isolate;
+}
+
+.low-opacity-bg-image::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  /* background: pink; */
+  opacity: 0.5;
+  background-image: url("img/LA-palms.avif");
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-family: var(--heading-font-family);
+  font-size: 100px;
+  display: block;
+  border-bottom: 0px;
+  text-shadow: 1px 1px 2px black;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+}
+
+.intro {
+  color: black;
+  margin-top: 25px;
+  font-family: var(--default-font-family);
+  font-size: 35px;
+  text-shadow: 1px 1px 1px lightskyblue;
+}
+
+p {
+  font-size: 25px;
+}
+
+img {
+  width: 550px;
+  border-radius: 10px;
+}
+
+a:link {
+  font-size: 20px;
+  text-decoration: none;
+  color: #272142;
+  transition: all 100ms ease-in-out;
+  text-transform: uppercase;
+  color: var(--primary-colors);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+.images-sports {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-container {
+  padding: 60px 30px;
+}
+
+.content p {
+  font-size: 25px;
+}
+
+.content {
+  margin: 30px;
+}
+
+section {
+  margin: 30px;
+  padding: 25px;
+  background: white;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+}
